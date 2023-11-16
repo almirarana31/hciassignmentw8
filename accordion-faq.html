@@ -1,0 +1,112 @@
+<!-- Accordion FAQs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion FAQs</title>
+    <link rel="stylesheet" href="week8stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Accordion FAQs</h1>
+      <h2>Frequently Asked Questions</h2>
+    </header>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div id="accordion">
+            <!-- FAQ Item 1 -->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <span class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Do you offer take-out or delivery?
+                  </span>
+                </h5>
+              </div>
+  
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  Most menu selections are available to go, for either pick up or delivery.
+                </div>
+              </div>
+            </div>
+  
+            <!-- FAQ Item 2 -->
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <span class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Do you offer a catering service?
+                  </span>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  Currently, we do not offer a catering service, but we are accustomed to fulfilling large orders.
+                </div>
+              </div>
+            </div>
+  
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <span class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Do you offer vegetarian and gluten-free dishes?
+                  </span>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  Yes, we do. Please ask your server for detials.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                  <span class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Do you accept reservations?
+                  </span>
+                </h5>
+              </div>
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                  Reservation policies vary by location. Most of our locations block out weekend reservations. Please call the location you would like to visit for details.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                  <span class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFour">
+                    Do you have a children's menu?
+                  </span>
+                </h5>
+              </div>
+              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                  Yes. We offer a creative selection of kid-friendly items. Ask your server or host for the award-winning, fun Kids’ Menu coloring page and crayons.
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".card-header").click(function() {
+          $(this).find(".btn").toggleClass("collapsed");
+          $(this).next(".collapse").slideToggle();
+        });
+      });
+    </script>
+  </body>
+  </html>

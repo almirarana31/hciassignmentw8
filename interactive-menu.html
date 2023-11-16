@@ -1,0 +1,92 @@
+<!-- Interactive Menu -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Food Menu</title>
+    <link rel="stylesheet" href="week8stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Interactive Food Menu</h1>
+        <h2>Japanese Cuisine</h2>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="example-element" data-text="Tempura: <br> Tempura are pieces or slices of meat, fish, and/or vegetables that have been covered in a special tempura batter and deep fried until they become crunchy and pale gold in colour.">
+            <img src="image1.jpg" alt="img1" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Tamagoyaki: <br> A versatile delicacy that can be enjoyed for breakfast, lunch, or dinner, tamagoyaki (which literally means ‘cooked egg’) is a Japanese omelette made by sequentially cooking and rolling up several layers of beaten egg (sometimes seasoned with soy sauce and/or sugar).">
+            <img src="image2.jpg" alt="img2" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Agedashi Tofu: <br> Crispy deep-fried tofu served in a flavorful umami sauce.">
+            <img src="image3.jpg" alt="img3" class="img-fluid">
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Natto: <br> This traditional Japanese food is made by fermenting soy beans in a special type of bacteria that is naturally produced in the human gastrointestinal tract.">
+            <img src="image4.jpg" alt="img4" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Udon: <br> One of the three main noodle varieties eaten in Japan; udon noodles are thick, chewy, and traditionally made from wheat flour and brine water.">
+            <img src="image5.jpg" alt="img5" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Sushi: <br> The word ‘sushi’ refers to any dish made with Japanese rice that has been seasoned with rice vinegar.">
+            <img src="image6.jpg" alt="img6" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Soba: <br> Otherwise known as ‘buckwheat noodles’ (‘soba’ is the Japanese word for ‘buckwheat’), soba are one of the three main varieties of noodle most frequently eaten in Japan. ">
+            <img src="image7.jpg" alt="img7" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Donburi: <br> Donburi is made by preparing (normally by simmering or frying) various meat, fish and vegetables and serving over steamed rice in large bowls (also called ‘donburi’).">
+            <img src="image8.jpg" alt="img8" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="example-element" data-text="Ramen: <br> Ramen is a noodle soup dish consisting of wheat noodles, a savoury broth, and toppings of meat, protein, and/or vegetables such as sliced pork, nori seaweed, spring onions, bamboo shoots, and others.">
+            <img src="image9.jpg" alt="img9" class="img-fluid">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $(".example-element").hover(
+              function() {
+                  var textToShow = $(this).data("text");
+                  $(this).append("<div class='overlay-text'>" + textToShow + "</div>");
+              },
+              function() {
+                  $(".overlay-text").remove();
+              }
+          );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFF7F1;
+}
+
+header {
+  background-color: #EEAA94;
+  color: #76493D;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10%;
+}
+
+/* Style the container that holds the image grid and the contact form */
+.container {
+  margin-top: 20px;
+}
+
+/* Style the individual grid items (columns) */
+.col-md-4 {
+  margin-bottom: 20px;
+}
+
+img {
+  border: 1px solid #F5D6C3; /* Add a border around the images */
+  max-width: 100%; /* Make sure images don't exceed their container */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+.example-element:hover img {
+  filter: brightness(80%); /* Adjust the brightness on hover */
+}
+
+/* Style for overlay text */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 80%;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Styles for the contact form */
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #EEAA94;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #76493D;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+span {
+  color: red
+}
+
+.content {
+  display: none;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.card-header {
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+button {
+  width: 100%;
+}
